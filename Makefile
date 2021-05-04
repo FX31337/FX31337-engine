@@ -1,6 +1,6 @@
 CC := gcc
 CFLAGS = -g
-INCLUDE = -I.
+INCLUDE = -std=c++11 -I.
 LIB =
 SRCDIR = src
 SRCFILES = main.cpp
