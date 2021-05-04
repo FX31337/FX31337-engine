@@ -1,0 +1,3 @@
+[submodule "classes"]
+	path = src/classes
+	url = https://github.com/EA31337/EA31337-classes
