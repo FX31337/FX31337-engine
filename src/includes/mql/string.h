@@ -9,21 +9,23 @@
  * Includes functions related to strings.
  */
 
-// Includes standard C++ library for non-MQL code.
-#include <stdarg.h>  // For va_start, etc.
+#define PrintFormat printf
 
-#include <memory>  // For std::unique_ptr
+// Includes standard C++ libraries.
 #include <string>
 
-template <typename... Args>
-std::string StringFormat(const std::string& format, Args... args) {
-  size_t size = snprintf(nullptr, 0, format.c_str(), args...) + 1;  // Extra space for '\0'
-  if (size <= 0) {
-    throw std::runtime_error("Error during formatting.");
-  }
-  std::unique_ptr<char[]> buf(new char[size]);
-  snprintf(buf.get(), size, format.c_str(), args...);
-  return std::string(buf.get(), buf.get() + size - 1);  // We don't want the '\0' inside
-}
+/**
+ * Returns the length of the string.
+ *
+ * @docs
+ * - https://www.mql5.com/en/docs/strings/stringlen
+ */
+int StringLen(string string_value) { return 0; }
 
-#define PrintFormat printf
+/**
+ * Extracts a substring from a text string starting from the specified position.
+ *
+ * @docs
+ * - https://www.mql5.com/en/docs/strings/stringsubstr
+ */
+string StringSubstr(string string_value, int start_pos, int length = -1) { return ""; }

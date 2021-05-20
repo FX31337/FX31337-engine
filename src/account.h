@@ -6,11 +6,11 @@
 
 /**
  * @file
- * Includes Terminal class.
+ * Includes Account class.
  */
 
 // Includes for MQL code compatibility.
-#include "includes/mql/check.h"
+#include "includes/mql/account.h"
 
 // Includes classes.
-#include "classes/Terminal.mqh"
+#include "classes/Account.mqh"

@@ -9,5 +9,8 @@
  * Includes MQL-compatible data types.
  */
 
+typedef std::string string;
 typedef unsigned int uint;
+typedef unsigned long datetime;
 typedef unsigned long ulong;
+typedef unsigned short ushort;

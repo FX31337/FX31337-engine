@@ -6,11 +6,16 @@
 
 /**
  * @file
- * Includes Terminal class.
+ * Includes MQL-compatible array functions.
+ *
+ * @docs
+ * - https://www.mql5.com/en/docs/array
  */
 
-// Includes for MQL code compatibility.
-#include "includes/mql/check.h"
+// Defines.
+#define WHOLE_ARRAY -1  // For processing the entire array.
 
-// Includes classes.
-#include "classes/Terminal.mqh"
+// Local includes.
+#include "datatype.h"
+#include "predefined.h"
+#include "string.h"

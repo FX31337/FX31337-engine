@@ -1,5 +1,6 @@
 {
   "files.associations": {
-    "*.mqh": "cpp"
+    "*.mqh": "cpp",
+    "memory": "cpp"
   }
 }

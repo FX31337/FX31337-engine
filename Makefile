@@ -6,7 +6,7 @@ SRCDIR = src
 SRCFILES = main.cpp
 TARGET = $(addprefix $(SRCDIR)/,$(SRCFILES:.cpp=.o))
 
-.PHONY: all clean
+.PHONY: all clean format
 .SUFFIXES: .c .cpp
 
 # Specify how to compile the .cpp files.
@@ -15,8 +15,11 @@ $(SRCDIR)/%.o: %.cpp | $(SRCDIR)
 
 all: $(TARGET)
 
+format:
+	clang-format -i $$(find . -name "*.cpp" -or -name "*.h" -print)
+
 clean:
-	echo rm -v $(OBJ) $(TARGET).o $(TARGET)
+	rm -v $(OBJ) $(TARGET)
 
 $(TARGET): $(OBJ) $(TARGET)
 	$(CC) $(CFLAGS) $(INCLUDE) $(TARGET:.o=.cpp) $(OBJ) $(LIB) -o $(TARGET)
